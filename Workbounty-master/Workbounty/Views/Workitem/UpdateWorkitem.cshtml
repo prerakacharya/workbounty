@@ -1,0 +1,58 @@
+﻿@model Workbounty.Models.UpdateWorkitems
+       @{
+    ViewBag.Title = "UpdateWorkitem";
+    Layout = "~/Views/_DashboardLayout.cshtml";
+}
+
+<h2>Add Document</h2>
+<div class="row">
+    <div class="col-xs-12">
+        @if (ViewBag.displayMessage != null)
+        {
+            
+                <p class="ui-icon-alert alert-success">
+                    You have already uploaded a document
+                </p>
+           
+        }
+
+       @if (ViewBag.dataForOpen != null)
+       {
+
+           foreach (Workbounty.Models.UpdateWorkitems i in ViewBag.dataForWorkitem)
+           {
+
+                <form class="form-horizontal" role="form" data-toggle="validator" name="Workitemform" id="Workitemform" method="post" enctype="multipart/form-data">
+                    <input type="hidden" id="Workid" name="Workid" value="@i.WorkItemID" />
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label" for="form-field-1"> Title </label>
+                        <div class="col-sm-3">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> @Html.DisplayFor(s => i.Title) </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label " for="form-field-1">  Summary</label>
+                        <div class="col-sm-3">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> @Html.DisplayFor(s => i.Summary)</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label" for="form-field-1">Attach Documents </label>
+                        <div class="col-sm-9">
+                            <input type="file" id="myFile" name="myFile" />
+                        </div>
+                    </div>
+                    <div class="col-sm-9">
+                        <div class="clearfix">
+                            <button class="btn btn-info" type="submit">
+                                <i class="ace-icon fa fa-check bigger-110"></i>
+                                Submit
+                            </button>
+                        </div>
+                    </div>
+                </form>
+           }
+       }
+    </div>
+</div>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="868e84ad6b6b4c9c9162d37c15b8ad64" Name="Diagram1">
+        <EntityTypeShape EntityType="WorkbountyDBModel.Team" Width="1.5" PointX="3" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="WorkbountyDBModel.UserInfo" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WorkbountyDBModel.Workitem" Width="1.5" PointX="3" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WorkbountyDBModel.WorkItemAssignment" Width="1.5" PointX="5.25" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="WorkbountyDBModel.WorkitemDistribution" Width="1.5" PointX="5.25" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="WorkbountyDBModel.WorkitemHistory" Width="1.5" PointX="8.25" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="WorkbountyDBModel.WorkitemRegistration" Width="1.5" PointX="8.25" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="WorkbountyDBModel.WorkitemStatu" Width="1.5" PointX="6" PointY="4.125" IsExpanded="true" />
+        <AssociationConnector Association="WorkbountyDBModel.FK_Team_Team" ManuallyRouted="false" />
+        <AssociationConnector Association="WorkbountyDBModel.FK_Team_UserInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="WorkbountyDBModel.FK_WorkitemDistribution_Team" ManuallyRouted="false" />
+        <AssociationConnector Association="WorkbountyDBModel.FK_UserInfo_UserInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="WorkbountyDBModel.FK_Workitem_UserInfo1" ManuallyRouted="false" />
+        <AssociationConnector Association="WorkbountyDBModel.FK_Workitem_UserInfo2" ManuallyRouted="false" />
+        <AssociationConnector Association="WorkbountyDBModel.FK_WorkItemAssignment_UserInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="WorkbountyDBModel.FK_WorkitemDistribution_UserInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="WorkbountyDBModel.FK_WorkitemHistory_UserInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="WorkbountyDBModel.FK_WorkitemRegistration_UserInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="WorkbountyDBModel.FK_Workitem_Workitem" ManuallyRouted="false" />
+        <AssociationConnector Association="WorkbountyDBModel.FK_WorkItemAssignment_Workitem" ManuallyRouted="false" />
+        <AssociationConnector Association="WorkbountyDBModel.FK_WorkitemDistribution_Workitem" ManuallyRouted="false" />
+        <AssociationConnector Association="WorkbountyDBModel.FK_WorkitemHistory_Workitem" ManuallyRouted="false" />
+        <AssociationConnector Association="WorkbountyDBModel.FK_WorkitemRegistration_Workitem" ManuallyRouted="false" />
+        <AssociationConnector Association="WorkbountyDBModel.FK_WorkitemHistory_WorkitemStatus" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

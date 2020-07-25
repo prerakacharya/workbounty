@@ -1,0 +1,81 @@
+﻿@model Workbounty.UserInfo
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/_IndexLayout.cshtml";
+}
+
+<script src="~/assets/js/jquery_UserLogin.js"></script>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    <div class="main-content">
+        <div class="row">
+            <div class="col-sm-10 col-sm-offset-1">
+                <div class="login-container">
+                    <div class="center">
+
+                    </div>
+                    <div class="space-6"></div>
+                    <div class="position-relative">
+                        <div id="login-box" class="login-box visible widget-box no-border">
+                            <div class="widget-body">
+                                <div class="widget-main">
+                                    <h4 class="header blue lighter bigger">
+                                        <i class="ace-icon fa fa-coffee green"></i>
+                                        Please Enter Your Information
+                                    </h4>
+                                    <div class="space-6"></div>
+                                    <form>
+                                        <fieldset>
+                                            <label class="block clearfix">
+                                                <span class="block input-icon input-icon-right">
+                                                    @Html.TextBoxFor(a => a.Email, new { @id = "Email", @class = "form-control", @placeholder = "E mail" })
+                                                </span>
+                                                @Html.ValidationMessageFor(a => a.Email)
+                                            </label>
+                                            <label class="block clearfix">
+                                                <span class="block input-icon input-icon-right">
+                                                    @Html.PasswordFor(a => a.Password, new { @id = "Password", @class = "form-control", @placeholder = "Password" })
+                                                </span>
+                                                @Html.ValidationMessageFor(a => a.Password)
+                                            </label>
+
+                                            <div class="space"></div>
+                                            <div class="clearfix">
+                                                <input id="loginButton" type="button" class="btn btn-primary pull-right" value="Login">
+                                            </div>
+                                            <div class="space-4"></div>
+                                        </fieldset>
+                                    </form>
+
+                                </div>
+                                <div class="toolbar clearfix">
+                                    <div>
+                                        <a href="~/Home/ForgotPassword" class="forgot-password-link">
+                                            <i class="ace-icon fa fa-arrow-left"></i>
+                                            I forgot my password
+                                        </a>
+                                    </div>
+                                    <div>
+
+                                        <a href="~/Home/Signup" class="user-signup-link">
+                                            I want to Register
+                                            <i class="ace-icon fa fa-arrow-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+}

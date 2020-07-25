@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WorkbountyDBModelStoreContainer" CdmEntityContainer="WorkbountyDBEntities">
+    <EntitySetMapping Name="Teams">
+      <EntityTypeMapping TypeName="WorkbountyDBModel.Team">
+        <MappingFragment StoreEntitySet="Team">
+          <ScalarProperty Name="TeamID" ColumnName="TeamID" />
+          <ScalarProperty Name="TeamName" ColumnName="TeamName" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="TeamUserInfoID" ColumnName="TeamUserInfoID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserInfoes">
+      <EntityTypeMapping TypeName="WorkbountyDBModel.UserInfo">
+        <MappingFragment StoreEntitySet="UserInfo">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="InterestedKeywords" ColumnName="InterestedKeywords" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Workitems">
+      <EntityTypeMapping TypeName="WorkbountyDBModel.Workitem">
+        <MappingFragment StoreEntitySet="Workitem">
+          <ScalarProperty Name="WorkitemID" ColumnName="WorkitemID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Summary" ColumnName="Summary" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="DueDate" ColumnName="DueDate" />
+          <ScalarProperty Name="PublishedTo" ColumnName="PublishedTo" />
+          <ScalarProperty Name="DocumentFilePath" ColumnName="DocumentFilePath" />
+          <ScalarProperty Name="ProposedReward" ColumnName="ProposedReward" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDateTime" ColumnName="CreatedDateTime" />
+          <ScalarProperty Name="ModifyBy" ColumnName="ModifyBy" />
+          <ScalarProperty Name="ModifyDateTime" ColumnName="ModifyDateTime" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="IsOpenForGroup" ColumnName="IsOpenForGroup" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkItemAssignments">
+      <EntityTypeMapping TypeName="WorkbountyDBModel.WorkItemAssignment">
+        <MappingFragment StoreEntitySet="WorkItemAssignment">
+          <ScalarProperty Name="WorkItemAssignmentID" ColumnName="WorkItemAssignmentID" />
+          <ScalarProperty Name="WorkItemID" ColumnName="WorkItemID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="SubmissionPath" ColumnName="SubmissionPath" />
+          <ScalarProperty Name="IsRewarded" ColumnName="IsRewarded" />
+          <ScalarProperty Name="SubmissionDateTime" ColumnName="SubmissionDateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkitemDistributions">
+      <EntityTypeMapping TypeName="WorkbountyDBModel.WorkitemDistribution">
+        <MappingFragment StoreEntitySet="WorkitemDistribution">
+          <ScalarProperty Name="WorkitemID" ColumnName="WorkitemID" />
+          <ScalarProperty Name="TeamID" ColumnName="TeamID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="WorkitemDistributionID" ColumnName="WorkitemDistributionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkitemHistories">
+      <EntityTypeMapping TypeName="WorkbountyDBModel.WorkitemHistory">
+        <MappingFragment StoreEntitySet="WorkitemHistory">
+          <ScalarProperty Name="WorkitemID" ColumnName="WorkitemID" />
+          <ScalarProperty Name="WorkitemStatusID" ColumnName="WorkitemStatusID" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedDateTIme" ColumnName="UpdatedDateTIme" />
+          <ScalarProperty Name="WorkitemHistoryID" ColumnName="WorkitemHistoryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkitemRegistrations">
+      <EntityTypeMapping TypeName="WorkbountyDBModel.WorkitemRegistration">
+        <MappingFragment StoreEntitySet="WorkitemRegistration">
+          <ScalarProperty Name="WorkitemID" ColumnName="WorkitemID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="IsExclusive" ColumnName="IsExclusive" />
+          <ScalarProperty Name="IsFavourite" ColumnName="IsFavourite" />
+          <ScalarProperty Name="IsRegistered" ColumnName="IsRegistered" />
+          <ScalarProperty Name="WorkitemRegistrationID" ColumnName="WorkitemRegistrationID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkitemStatus">
+      <EntityTypeMapping TypeName="WorkbountyDBModel.WorkitemStatu">
+        <MappingFragment StoreEntitySet="WorkitemStatus">
+          <ScalarProperty Name="WorkitemStatusID" ColumnName="WorkitemStatusID" />
+          <ScalarProperty Name="StatusDescription" ColumnName="StatusDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
